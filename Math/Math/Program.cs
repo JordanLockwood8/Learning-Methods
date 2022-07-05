@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using Math;
 
 Console.WriteLine("learning methods!");
@@ -14,3 +14,6 @@ Console.WriteLine(answer3);
 
 var answer4 = Methods.Div(50, 5);
 Console.WriteLine(answer4);
+
+var answer5 = Methods.Compute('*', 12,7);
+Console.WriteLine(answer5);

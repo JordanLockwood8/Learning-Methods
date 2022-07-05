@@ -8,12 +8,10 @@ namespace Math
 {
     internal class Methods
     {
-        public static int Add(int num1, int num2)
+        public static int Add(params int[] ints)
         {
-            var sum = num1 + num2;
-            return sum;
+            return ints.Sum();
         }
-
         public static int Sub(int num1,int num2)
         {
             var sub = num1 - num2;
@@ -31,7 +29,26 @@ namespace Math
             return div;
         }
 
-
+        public static int Compute(char op, int num1, int num2)
+        {
+            if (op == '+')
+            {
+                return Add(num1, num2);
+            }
+            else if (op == '-')
+            {
+                return Sub(num1, num2);
+            }
+            else if (op == '*')
+            {
+                return Mul(num1, num2);
+            }
+            else if (op == '/')
+            {
+                return Div(num1, num2);
+            }
+           
+        }
 
     }
 
